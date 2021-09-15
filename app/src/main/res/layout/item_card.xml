@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:id="@+id/task_card"
+    style="@style/Widget.App.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/text_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="the question"
+            android:paddingVertical="8dp"
+            style="@style/AnswerText.question"
+            app:layout_constraintTop_toTopOf="parent" />
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_question">
+            <RadioButton
+                android:id="@+id/text_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="the Answer body"
+                style="@style/AnswerText.Button"
+                />
+            <RadioButton
+                android:id="@+id/text_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AnswerText.Button"
+                tools:text="the Answer body"/>
+            <RadioButton
+                android:id="@+id/text_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AnswerText.Button"
+                tools:text="the Answer body"/>
+            <RadioButton
+                android:id="@+id/text_answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AnswerText.Button"
+                tools:text="the Answer body"/>
+        </RadioGroup>
+<!--        <Button-->
+<!--            android:id="@+id/text_answer1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:text="the question body"-->
+<!--            style="@style/AnswerText.Button"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/text_question"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:id="@+id/text_answer2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:text="the question body"-->
+<!--            style="@style/AnswerText.Button"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/text_answer1"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:id="@+id/text_answer3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:text="the question body"-->
+<!--            style="@style/AnswerText.Button"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/text_answer2"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:id="@+id/text_answer4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:text="the question body"-->
+<!--            style="@style/AnswerText.Button"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/text_answer3"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
