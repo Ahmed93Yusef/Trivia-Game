@@ -1,6 +1,7 @@
 package com.example.trivia_gaming.util
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,6 @@ import com.example.trivia_gaming.data.domain.Results
 import com.example.trivia_gaming.databinding.ItemCardBinding
 
 class ItemAdapter(private var list: List<Results>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
-
     private lateinit var context: Context
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val item = R.layout.item_card
@@ -28,13 +28,12 @@ class ItemAdapter(private var list: List<Results>): RecyclerView.Adapter<ItemAda
                 textAnswer4
             )
             with(list[position]){
-            listItem[0].text = question
-            listItem[1].text = correctAnswer
-                listItem[2].text = incorrectAnswers!![0]
-                listItem[3].text = incorrectAnswers[1]
-                listItem[4].text = incorrectAnswers[2]
-           }
-
+                listItem[0].text = question
+                listItem[1].text = correctAnswer
+                listItem[2].text = incorrectAnswers?.get(0)
+                listItem[3].text = incorrectAnswers?.get(1)
+                listItem[4].text = incorrectAnswers?.get(2)
+            }
             listItem.forEach { it.isSelected = true }
         }
     }

@@ -11,11 +11,16 @@ class StartFragment : BaseFragment<FragmentStartBinding>(){
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentStartBinding
         get() = FragmentStartBinding::inflate
     override fun setup() {
+        DataManager.getUrl(amount = 10,category = 10,difficulty = "easy")
+        adapterSetFunction()
+    }
+    override fun callBack() {
+    }
+
+
+    private fun adapterSetFunction() {
         val adapter = ItemAdapter(DataManager.dataGame)
         NetWork.makeRequestUsingOkhttp(requireActivity(),adapter)
         binding.recycleView.adapter = adapter
     }
-    override fun callBack() {  }
-
-
 }

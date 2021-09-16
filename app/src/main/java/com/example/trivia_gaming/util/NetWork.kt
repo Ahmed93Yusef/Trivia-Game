@@ -11,15 +11,8 @@ import java.io.IOException
 object NetWork {
     private val client = OkHttpClient()
     private val gson = Gson()
-    private var difficulty = "easy"
     fun makeRequestUsingOkhttp(activity: Activity, adapter: ItemAdapter){
-        val request = Request.Builder().
-            url("https://opentdb.com/api.php?" +
-                    "amount=10" +
-                    "&category=10" +
-                    "&difficulty=$difficulty" +
-                    "&type=multiple\n"
-            ).build()
+        val request = Request.Builder().url(DataManager.url).build()
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 Log.d("START_FRAGMENT","failed${e.message}")

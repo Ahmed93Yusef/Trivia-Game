@@ -5,11 +5,13 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.trivia_gaming.R
 import com.example.trivia_gaming.databinding.ActivityMainBinding
+import com.example.trivia_gaming.ui.fragment.InitialFragment
 import com.example.trivia_gaming.ui.fragment.StartFragment
+import com.example.trivia_gaming.util.Interface
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),Interface {
     private lateinit var binding: ActivityMainBinding
-    private val myStartFragment = StartFragment()
+    private val myInitialFragment = InitialFragment(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -17,11 +19,18 @@ class MainActivity : AppCompatActivity() {
         setup()
     }
     private fun setup() {
-        addFragment(myStartFragment)
+        addFragment(myInitialFragment)
     }
-    private fun addFragment(fragment: Fragment) {
+
+    override fun addFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.fragment_container, fragment)
+        transaction.commit()
+    }
+
+    override fun replaceFragment(fragment: Fragment) {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_container, fragment)
         transaction.commit()
     }
 }

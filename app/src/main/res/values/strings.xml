@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">trivia_gaming</string>
+    <string name="number_of_questions">Number of Questions</string>
+    <string name="category_type">Category Type </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trivia_game">TRIVIA GAME</string>
+    <string name="test_your_knowledge_of_different_types_of_categories">Test your knowledge of different types of Categories</string>
+    <string name="start_game">Start Game</string>
 </resources>
