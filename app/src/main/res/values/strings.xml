@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">trivia_gaming</string>
     <string name="number_of_questions">Number of Questions</string>
-    <string name="category_type">Category Type </string>
+    <string name="category_type">Category Type From 10-20 </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="trivia_game">TRIVIA GAME</string>

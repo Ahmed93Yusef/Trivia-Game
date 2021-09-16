@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:animateLayoutChanges="true"
     android:id="@+id/task_card"
+    android:backgroundTint="@color/white"
     style="@style/Widget.App.CardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -16,7 +17,7 @@
         <TextView
             android:id="@+id/text_question"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             tools:text="the question"
             android:paddingVertical="12dp"
             style="@style/AnswerText.question"

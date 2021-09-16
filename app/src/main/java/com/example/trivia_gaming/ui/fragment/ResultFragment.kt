@@ -3,8 +3,9 @@ package com.example.trivia_gaming.ui.fragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.trivia_gaming.databinding.FragmentResultBinding
+import com.example.trivia_gaming.util.Interface
 
-class ResultFragment: BaseFragment<FragmentResultBinding>(){
+class ResultFragment(private val replace: Interface?): BaseFragment<FragmentResultBinding>(){
     override fun setup() {
     }
     override fun callBack() {

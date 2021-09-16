@@ -21,23 +21,22 @@ class ItemAdapter(private var list: List<Results>): RecyclerView.Adapter<ItemAda
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         holder.binding.apply {
             val listItem = listOf(
-                textQuestion,
                 textAnswer1,
                 textAnswer2,
                 textAnswer3,
                 textAnswer4
-            )
+            ).shuffled()
             with(list[position]){
-                listItem[0].text = question
-                listItem[1].text = correctAnswer
-                listItem[2].text = incorrectAnswers?.get(0)
-                listItem[3].text = incorrectAnswers?.get(1)
-                listItem[4].text = incorrectAnswers?.get(2)
+                val questionText = "Q${position+1}: $question"
+                textQuestion.text = questionText
+                listItem[0].text = correctAnswer
+                listItem[1].text = incorrectAnswers?.get(0)
+                listItem[2].text = incorrectAnswers?.get(1)
+                listItem[3].text = incorrectAnswers?.get(2)
             }
             listItem.forEach { it.isSelected = true }
         }
     }
-
     override fun getItemCount() = list.size
     class ItemViewHolder(viewItem: View) : RecyclerView.ViewHolder(viewItem) {
         val binding = ItemCardBinding.bind(viewItem)
