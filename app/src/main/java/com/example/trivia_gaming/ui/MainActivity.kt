@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity(),Interface {
     private lateinit var binding: ActivityMainBinding
     override val myInitialFragment = InitialFragment(this)
     override val myStartFragment = StartFragment(this)
-    override val myResultFragment = ResultFragment(this)
+    override val myResultFragment= ResultFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
