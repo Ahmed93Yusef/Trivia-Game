@@ -29,6 +29,7 @@ class InitialFragment(private val replace: Interface?) : BaseFragment<FragmentIn
             sendDataFunction()
             replace?.replaceFragment(replace.myStartFragment)
         }
+
     }
     private fun setSpinner(){
         val items = DataManager.difficultyList

@@ -6,6 +6,7 @@ object DataManager {
     private val dataList = mutableListOf<Results>()
     private var myUrl: String = ""
     private val list = listOf("easy","medium","hard")
+    private var initResult = 0
 
     val dataGame: List<Results>
     get() = dataList
@@ -15,6 +16,9 @@ object DataManager {
 
     val difficultyList: List<String>
     get() = list
+
+    val results: Int
+    get() = initResult
 
     fun addData(list: List<Results>){
         list.forEach {
@@ -27,6 +31,9 @@ object DataManager {
                 "&category=${category}" +
                 "&difficulty=${difficulty}" +
                 "&type=multiple\n"
+    }
+    fun getResults(result: Int, size: Int) {
+        initResult = (result/size)*100
     }
 
 }

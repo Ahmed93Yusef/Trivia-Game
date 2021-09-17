@@ -26,4 +26,5 @@
     <color name="pink_task">#ffccec</color>
     <color name="homeIconsColor">@color/white</color>
     <color name="dark_green">#FF4EE167</color>
+    <color name="red">#FF0000</color>
 </resources>
